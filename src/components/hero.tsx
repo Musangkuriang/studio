@@ -67,15 +67,15 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="relative lg:w-1/2 mt-12 lg:mt-0 w-full h-[50vh] lg:h-auto flex items-center justify-center">
-             <div className="absolute inset-y-0 right-0 w-full lg:w-[150%] h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-tl-full" />
-             <div className="relative z-10">
+          <div className="relative lg:w-1/2 mt-12 lg:mt-0 w-full flex items-center justify-center lg:h-screen">
+             <div className="absolute right-0 top-0 h-full w-[80%] bg-gradient-to-br from-blue-500 to-purple-600 rounded-bl-full" />
+             <div className="relative z-10 w-full max-w-md lg:max-w-none lg:w-auto">
                 <Image
                   src="/profile.png"
                   alt="Jhon Ray"
-                  width={400}
-                  height={400}
-                  className="rounded-full border-8 border-white shadow-2xl"
+                  width={500}
+                  height={500}
+                  className="rounded-full border-8 border-white shadow-2xl object-cover w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
                   data-ai-hint="profile picture"
                   priority
                 />
