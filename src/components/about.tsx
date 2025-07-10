@@ -21,7 +21,7 @@ export default function About() {
           <div className="relative h-96">
             <Image
               fill
-              src="/about-me.png"
+              src="/img/about-me.png"
               alt="Andi Siswanto working"
               className="rounded-3xl shadow-xl object-cover"
               data-ai-hint="designer working"
