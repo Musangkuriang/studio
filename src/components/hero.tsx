@@ -44,8 +44,8 @@ export default function Hero() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] animate-fade-in" style={{animationDelay: '200ms'}}>
                   <Image
-                    src="/profile.png"
-                    alt="Jhon Ray"
+                    src="/andi-siswanto.png"
+                    alt="Andi Siswanto"
                     width={550}
                     height={550}
                     className="rounded-full border-8 border-white/50 shadow-2xl object-cover w-full h-full"
@@ -62,7 +62,7 @@ export default function Hero() {
            <div className="text-center animate-fade-in" style={{animationDelay: '400ms'}}>
               <p className="text-lg text-gray-600 mb-2">Hello,</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-                I Am <span className="text-gradient-john-ray">Jhon Ray</span>
+                I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
                 UI/UX Designer
@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="w-1/2 pr-10 text-left z-10 animate-fade-in" style={{animationDelay: '200ms'}}>
             <p className="text-lg text-gray-600 mb-2">Hello,</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-              I Am <span className="text-gradient-john-ray">Jhon Ray</span>
+              I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
               UI/UX Designer
@@ -119,8 +119,8 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px] animate-fade-in" style={{animationDelay: '600ms'}}>
                   <Image
-                    src="/profile.png"
-                    alt="Jhon Ray"
+                    src="/andi-siswanto.png"
+                    alt="Andi Siswanto"
                     width={550}
                     height={550}
                     className="rounded-full border-8 md:border-[12px] border-white/50 shadow-2xl object-cover w-full h-full"
