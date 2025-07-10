@@ -22,7 +22,7 @@ export default function About() {
             <div className="relative h-80 w-80 sm:h-96 sm:w-96">
                 <Image
                 fill
-                src="https://raw.githubusercontent.com/Musangkuriang/studio/master/src/public/img/about-me.png?raw=true"
+                src="https://raw.githubusercontent.com/Musangkuriang/studio/master/src/public/img/about-me.png"
                 alt="Andi Siswanto working"
                 className="rounded-full shadow-xl object-cover"
                 data-ai-hint="designer working"
