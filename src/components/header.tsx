@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -39,15 +39,17 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-white">
               <div className="flex h-full flex-col">
-                <div className="flex items-center justify-between border-b pb-4">
-                  <Link href="#home" onClick={() => setIsOpen(false)}>
-                    <span className="text-2xl font-extrabold text-gradient">AS</span>
-                  </Link>
+                <SheetHeader className="flex-row items-center justify-between border-b pb-4">
+                    <SheetTitle>
+                        <Link href="#home" onClick={() => setIsOpen(false)}>
+                            <span className="text-2xl font-extrabold text-gradient">AS</span>
+                        </Link>
+                    </SheetTitle>
                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                     <X className="h-6 w-6" />
                     <span className="sr-only">Close menu</span>
                   </Button>
-                </div>
+                </SheetHeader>
                 <nav className="mt-8 flex flex-col space-y-6">
                   {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
