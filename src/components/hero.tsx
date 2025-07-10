@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { ArrowRight, Hand } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const WavingHandIcon = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@ const WavingHandIcon = () => (
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full bg-gray-50 overflow-hidden">
+    <section id="home" className="w-full bg-gray-50 overflow-hidden">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center min-h-screen pt-24 lg:pt-0">
 
@@ -67,9 +67,11 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 lg:rounded-bl-full" />
-            <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-full mt-10 lg:mt-0 lg:w-1/2 lg:h-full">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 w-[200%] h-[200%] lg:w-full lg:h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 lg:rounded-bl-full" />
+            </div>
+            <div className="relative w-full h-full flex items-center justify-center lg:justify-end py-10 lg:py-0">
               <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
                     src="/profile.png"
