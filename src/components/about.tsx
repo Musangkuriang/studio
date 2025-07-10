@@ -18,13 +18,12 @@ export default function About() {
     <section id="about" className="w-full bg-gray-50 py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative">
+          <div className="relative h-96">
             <Image
+              fill
               src="/about-me.png"
               alt="Andi Siswanto working"
-              width={600}
-              height={600}
-              className="rounded-3xl shadow-xl"
+              className="rounded-3xl shadow-xl object-cover"
               data-ai-hint="designer working"
             />
             <div className="absolute -top-6 -left-6 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
