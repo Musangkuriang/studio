@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center min-h-screen pt-24 lg:pt-0">
 
           {/* Left Column */}
-          <div className="lg:w-1/2 lg:pr-10 text-center lg:text-left">
+          <div className="lg:w-1/2 lg:pr-10 text-center lg:text-left z-10">
             <p className="text-lg text-gray-600 mb-2">Hello,</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
               I Am <span className="text-gradient-john-ray">Jhon Ray</span>
@@ -67,22 +67,24 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="relative lg:w-1/2 mt-12 lg:mt-0 w-full flex items-center justify-center lg:h-screen">
-             <div className="absolute right-0 top-0 h-full w-[80%] bg-gradient-to-br from-blue-500 to-purple-600 rounded-bl-full" />
-             <div className="relative z-10 w-full max-w-md lg:max-w-none lg:w-auto">
-                <Image
-                  src="/profile.png"
-                  alt="Jhon Ray"
-                  width={500}
-                  height={500}
-                  className="rounded-full border-8 border-white shadow-2xl object-cover w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
-                  data-ai-hint="profile picture"
-                  priority
-                />
-             </div>
-             <div className="absolute bottom-10 right-10 lg:bottom-16 lg:right-24 z-20 animate-pulse">
-                <WavingHandIcon />
-             </div>
+          <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 lg:rounded-bl-full" />
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px]">
+                  <Image
+                    src="/profile.png"
+                    alt="Jhon Ray"
+                    width={550}
+                    height={550}
+                    className="rounded-full border-8 md:border-[12px] border-white/50 shadow-2xl object-cover w-full h-full"
+                    data-ai-hint="profile picture"
+                    priority
+                  />
+                  <div className="absolute bottom-5 right-5 lg:bottom-10 lg:right-10 z-20 animate-pulse">
+                    <WavingHandIcon />
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
