@@ -20,7 +20,7 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative">
             <Image
-              src="/about-me.png"
+              src="/about-me-work.png"
               alt="Andi Siswanto working"
               width={600}
               height={600}
