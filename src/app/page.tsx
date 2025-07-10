@@ -9,9 +9,11 @@ import Footer from '@/components/footer';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Header />
-      <div className="w-full">
+      <div className="w-full relative">
+        <Header />
         <Hero />
+      </div>
+      <div className="w-full">
         <About />
         <Portfolio />
         <AiOptimizer />
