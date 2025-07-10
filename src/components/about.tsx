@@ -18,18 +18,20 @@ export default function About() {
     <section id="about" className="w-full bg-gray-50 py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative h-96">
-            <Image
-              fill
-              src="https://raw.githubusercontent.com/Musangkuriang/studio/master/src/public/img/about-me.png"
-              alt="Andi Siswanto working"
-              className="rounded-3xl shadow-xl object-cover"
-              data-ai-hint="designer working"
-            />
-            <div className="absolute -top-6 -left-6 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
-              <FigmaIcon />
+          <div className="relative flex justify-center items-center">
+            <div className="relative h-80 w-80 sm:h-96 sm:w-96">
+                <Image
+                fill
+                src="https://raw.githubusercontent.com/Musangkuriang/studio/master/src/public/img/about-me.png?raw=true"
+                alt="Andi Siswanto working"
+                className="rounded-full shadow-xl object-cover"
+                data-ai-hint="designer working"
+                />
+                <div className="absolute -top-4 -left-4 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
+                <FigmaIcon />
+                </div>
+                <div className="absolute -bottom-4 -right-4 z-10 h-24 w-24 rounded-full bg-gradient-to-br from-purple-100 to-blue-100" />
             </div>
-            <div className="absolute -bottom-6 -right-6 z-10 h-24 w-24 rounded-full bg-gradient-to-br from-purple-100 to-blue-100" />
           </div>
           <div className="space-y-6">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
