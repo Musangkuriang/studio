@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const WavingHandIcon = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,10 +37,10 @@ const WavingHandIcon = () => (
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full bg-gray-50 overflow-hidden">
+    <section id="home" className="w-full bg-white overflow-hidden">
       <div className="lg:hidden">
         {/* Mobile Layout */}
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 pt-24 pb-12 rounded-b-3xl">
+        <div className="bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-24 pb-12 rounded-b-3xl">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
@@ -111,7 +112,9 @@ export default function Hero() {
           </div>
           <div className="relative w-1/2 h-screen flex items-center justify-end">
             <div className="absolute inset-y-0 right-0 w-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-bl-full" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-purple-100" />
+                <div className="absolute -bottom-1/4 -left-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-tr from-purple-200 to-white opacity-50" />
+                <div className="absolute -top-1/4 -right-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-bl from-blue-200 to-white opacity-50" />
             </div>
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
