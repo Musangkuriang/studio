@@ -34,15 +34,59 @@ const WavingHandIcon = () => (
   </svg>
 );
 
-
 export default function Hero() {
   return (
     <section id="home" className="w-full bg-gray-50 overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center min-h-screen pt-24 lg:pt-0">
-
-          {/* Left Column */}
-          <div className="lg:w-1/2 lg:pr-10 text-center lg:text-left z-10">
+      <div className="lg:hidden">
+        {/* Mobile Layout */}
+        <div className="bg-gradient-to-br from-blue-500 to-purple-600 pt-24 pb-12 rounded-b-3xl">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
+                  <Image
+                    src="/profile.png"
+                    alt="Jhon Ray"
+                    width={550}
+                    height={550}
+                    className="rounded-full border-8 border-white/50 shadow-2xl object-cover w-full h-full"
+                    data-ai-hint="profile picture"
+                    priority
+                  />
+                  <div className="absolute bottom-5 right-5 z-20 animate-pulse">
+                    <WavingHandIcon />
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
+           <div className="text-center">
+              <p className="text-lg text-gray-600 mb-2">Hello,</p>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
+                I Am <span className="text-gradient-john-ray">Jhon Ray</span>
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
+                UI/UX Designer
+              </h2>
+              <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto">
+                Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
+              </p>
+              <div className="mt-8">
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-6 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  <Link href="#contact">
+                    Let's talk <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="hidden lg:block container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Desktop Layout */}
+        <div className="flex items-center min-h-screen">
+          <div className="w-1/2 pr-10 text-left z-10">
             <p className="text-lg text-gray-600 mb-2">Hello,</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
               I Am <span className="text-gradient-john-ray">Jhon Ray</span>
@@ -50,7 +94,7 @@ export default function Hero() {
             <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
               UI/UX Designer
             </h2>
-            <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto lg:mx-0">
+            <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0">
               Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
             </p>
             <div className="mt-8">
@@ -65,14 +109,12 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-
-          {/* Right Column */}
-          <div className="relative w-full mt-10 lg:mt-0 lg:w-1/2 lg:h-full">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:top-0 lg:left-0 w-[200%] h-[200%] lg:w-full lg:h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 lg:rounded-bl-full" />
+          <div className="relative w-1/2 h-screen flex items-center justify-end">
+            <div className="absolute inset-y-0 right-0 w-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-bl-full" />
             </div>
-            <div className="relative w-full h-full flex items-center justify-center lg:justify-end py-10 lg:py-0">
-              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px]">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
                     src="/profile.png"
                     alt="Jhon Ray"
@@ -82,7 +124,7 @@ export default function Hero() {
                     data-ai-hint="profile picture"
                     priority
                   />
-                  <div className="absolute bottom-5 right-5 lg:bottom-10 lg:right-10 z-20 animate-pulse">
+                  <div className="absolute bottom-10 right-10 z-20 animate-pulse">
                     <WavingHandIcon />
                   </div>
               </div>
