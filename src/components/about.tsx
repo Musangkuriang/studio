@@ -20,13 +20,13 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative flex justify-center items-center">
             <div className="relative h-80 w-80 sm:h-96 sm:w-96">
-                <Image
+              <Image
+                src="/img/about-me.png"
+                alt="Andi Siswanto"
                 fill
-                src="https://raw.githubusercontent.com/Musangkuriang/studio/master/src/public/img/about-me.png"
-                alt="Andi Siswanto working"
-                className="rounded-full shadow-xl object-cover"
-                data-ai-hint="designer working"
-                />
+                className="object-cover rounded-full"
+                data-ai-hint="person working"
+              />
                 <div className="absolute -top-4 -left-4 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
                 <FigmaIcon />
                 </div>
