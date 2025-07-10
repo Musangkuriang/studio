@@ -68,7 +68,7 @@ export default function Hero() {
 
           {/* Right Column */}
           <div className="relative lg:w-1/2 mt-12 lg:mt-0 w-full h-[50vh] lg:h-auto flex items-center justify-center">
-             <div className="absolute inset-0 right-[-50%] bottom-[-20%] lg:right-[-40%] lg:bottom-[-25%] bg-gradient-to-br from-blue-500 to-purple-600 rounded-tl-full" />
+             <div className="absolute inset-y-0 right-0 w-full lg:w-[150%] h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-tl-full" />
              <div className="relative z-10">
                 <Image
                   src="/profile.png"
