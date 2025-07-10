@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           <div className="relative mb-8 animate-[fade-in_1s_ease-out_0.2s] opacity-0 [animation-fill-mode:forwards]">
             <Image
-              src="https://placehold.co/128x128.png"
+              src="/profile.png"
               alt="Andi Siswanto"
               width={128}
               height={128}
