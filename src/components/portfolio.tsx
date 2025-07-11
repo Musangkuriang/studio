@@ -17,7 +17,7 @@ const projects = [
     title: 'Pengalaman Kerja',
     description: 'A secure and user-friendly mobile app for personal banking, including transfers, payments, and account management.',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
-    tags: ['Mobile Design', 'FinTech', 'Security'],
+    tags: ['Mobile Design', 'Pengawas Desa', 'Security'],
     liveUrl: '#',
     githubUrl: '#',
     aiHint: 'mobile banking'
