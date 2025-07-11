@@ -24,9 +24,9 @@ const projects = [
   },
   {
     title: 'Karya',
-    description: 'An integrated platform for patients to book appointments, consult with doctors, and manage medical records.',
+    description: 'Saya Memiliki Beberapa Karya Yang Berhasil Saya Bangun Dari Web Developer Dan Desain Grafis',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
-    tags: ['Web Aplikasi', 'Desain Grafis', 'Prototyping'],
+    tags: ['Web Aplikasi', 'Desain Grafis', 'Prestasi Kepemimpinan'],
     liveUrl: '#',
     githubUrl: '#',
     aiHint: 'healthcare telehealth'
