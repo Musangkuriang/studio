@@ -19,15 +19,16 @@ export default function About() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center items-center">
-             {/* Simplified image for debugging */}
-             <Image
-                src="/img/kon.png"
-                alt="Foto profil Andi Siswanto"
-                width={384}
-                height={384}
-                className="rounded-full object-cover shadow-lg border-8 border-white"
-                data-ai-hint="person profile"
-              />
+             <div className="relative w-96 h-96">
+                <Image
+                    src="/img/kon.png"
+                    alt="Foto profil Andi Siswanto"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded-full object-cover shadow-lg border-8 border-white"
+                    data-ai-hint="person profile"
+                />
+             </div>
           </div>
           <div className="space-y-6">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
