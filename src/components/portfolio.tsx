@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'E-Commerce Dashboard',
     description: 'A comprehensive dashboard for managing products, orders, and customers for an e-commerce platform.',
-    image: '/img/kon.png',
+    image: 'https://i.imgur.com/eB3sYtE.png',
     tags: ['UI/UX', 'React', 'Data Visualization'],
     liveUrl: '#',
     githubUrl: '#',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Mobile Banking App',
     description: 'A secure and user-friendly mobile app for personal banking, including transfers, payments, and account management.',
-    image: '/img/kon.png',
+    image: 'https://i.imgur.com/eB3sYtE.png',
     tags: ['Mobile Design', 'FinTech', 'Security'],
     liveUrl: '#',
     githubUrl: '#',
@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Healthcare Platform',
     description: 'An integrated platform for patients to book appointments, consult with doctors, and manage medical records.',
-    image: '/img/kon.png',
+    image: 'https://i.imgur.com/eB3sYtE.png',
     tags: ['HealthTech', 'User Research', 'Prototyping'],
     liveUrl: '#',
     githubUrl: '#',
@@ -34,7 +34,7 @@ const projects = [
   {
     title: 'Learning Management System',
     description: 'An online platform for students and teachers to manage courses, assignments, and collaborative learning.',
-    image: '/img/kon.png',
+    image: 'https://i.imgur.com/eB3sYtE.png',
     tags: ['EdTech', 'SaaS', 'Interaction Design'],
     liveUrl: '#',
     githubUrl: '#',
