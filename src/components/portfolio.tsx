@@ -14,7 +14,7 @@ const projects = [
     aiHint: 'dashboard analytics'
   },
   {
-    title: 'Mobile Banking App',
+    title: 'Pengalaman Kerja',
     description: 'A secure and user-friendly mobile app for personal banking, including transfers, payments, and account management.',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
     tags: ['Mobile Design', 'FinTech', 'Security'],
