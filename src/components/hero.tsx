@@ -42,23 +42,24 @@ export default function Hero() {
         {/* Mobile Layout */}
         <div className="bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-24 pb-12 rounded-b-3xl">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] animate-fade-in" style={{animationDelay: '200ms'}}>
+              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
                     src="/img/kon.png"
                     alt="Andi Siswanto"
                     fill
+                    sizes="(max-width: 640px) 280px, 320px"
                     className="rounded-full border-8 border-white/50 shadow-2xl object-cover w-full h-full"
                     data-ai-hint="profile picture"
                     priority
                   />
-                  <div className="absolute bottom-5 right-5 z-20 animate-pulse">
+                  <div className="absolute bottom-5 right-5 z-20">
                     <WavingHandIcon />
                   </div>
               </div>
           </div>
         </div>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
-           <div className="text-center animate-fade-in" style={{animationDelay: '400ms'}}>
+           <div className="text-center">
               <p className="text-lg text-gray-600 mb-2">Hello,</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
                 I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
@@ -69,7 +70,7 @@ export default function Hero() {
               <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto">
                 Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
               </p>
-              <div className="mt-8 animate-fade-in" style={{animationDelay: '600ms'}}>
+              <div className="mt-8">
                 <Button
                   asChild
                   size="lg"
@@ -86,7 +87,7 @@ export default function Hero() {
       <div className="hidden lg:block container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Desktop Layout */}
         <div className="flex items-center min-h-screen">
-          <div className="w-1/2 pr-10 text-left z-10 animate-fade-in" style={{animationDelay: '200ms'}}>
+          <div className="w-1/2 pr-10 text-left z-10">
             <p className="text-lg text-gray-600 mb-2">Hello,</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
               I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
@@ -97,7 +98,7 @@ export default function Hero() {
             <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0">
               Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
             </p>
-            <div className="mt-8 animate-fade-in" style={{animationDelay: '400ms'}}>
+            <div className="mt-8">
               <Button
                 asChild
                 size="lg"
@@ -112,20 +113,21 @@ export default function Hero() {
           <div className="relative w-1/2 h-screen flex items-center justify-end">
             <div className="absolute inset-y-0 right-0 w-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-purple-100 opacity-20" />
-                <div className="absolute -bottom-1/4 -left-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-tr from-purple-200 to-white opacity-40 animate-fade-in" style={{animationDelay: '800ms'}} />
-                <div className="absolute -top-1/4 -right-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-bl from-blue-200 to-white opacity-40 animate-fade-in" style={{animationDelay: '1000ms'}} />
+                <div className="absolute -bottom-1/4 -left-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-tr from-purple-200 to-white opacity-40" />
+                <div className="absolute -top-1/4 -right-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-bl from-blue-200 to-white opacity-40" />
             </div>
             <div className="relative w-full h-full flex items-center justify-center">
-              <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px] animate-fade-in" style={{animationDelay: '600ms'}}>
+              <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
                     src="/img/kon.png"
                     alt="Andi Siswanto"
                     fill
+                    sizes="(max-width: 1280px) 450px, 550px"
                     className="rounded-full border-8 md:border-[12px] border-white/50 shadow-2xl object-cover w-full h-full"
                     data-ai-hint="profile picture"
                     priority
                   />
-                  <div className="absolute bottom-10 right-10 z-20 animate-pulse">
+                  <div className="absolute bottom-10 right-10 z-20">
                     <WavingHandIcon />
                   </div>
               </div>
