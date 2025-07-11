@@ -22,7 +22,7 @@ export default function About() {
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-200 via-blue-200 to-white rounded-full opacity-30 blur-xl"></div>
              <div className="relative w-80 h-80 sm:w-96 sm:h-96">
                 <Image
-                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
+                    src="https://i.imghippo.com/files/VG2113DDs.jpeg"
                     alt="Foto profil Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 384px"
