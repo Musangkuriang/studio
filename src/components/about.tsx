@@ -36,7 +36,7 @@ export default function About() {
               About Me
             </h2>
             <p className="text-lg text-gray-600">
-              I'm a designer who loves to create meaningful and beautiful experiences for people. I believe that good design is not just about aesthetics, but about understanding users and solving their problems.
+              Saya adalah pribadi yang tulus,adaptif, pekerja keras, dan selalu haus belajar. Memiliki pengalaman lintas bidang mulai dari teknik mesin, kewirausahaan, desain grafis, hingga kepemimpinan organisasi. Terbiasa memulai sesuatu dari nol dan membangunnya dengan ketekunan, kreativitas, dan semangat kolaboratif. Saya percaya bahwa keberhasilan dicapai bukan hanya lewat kerja keras, tapi juga lewat kejujuran, konsistensi, dan kemauan untuk terus berkembang.
             </p>
             <p className="text-lg text-gray-600">
               With a strong foundation in user research, wireframing, prototyping, and visual design, I bring ideas to life from concept to launch. I thrive in collaborative environments and am always eager to learn and grow.
