@@ -25,7 +25,7 @@ export default function About() {
             <div className="absolute -bottom-4 -right-4 z-0 h-24 w-24 rounded-full bg-gradient-to-br from-purple-100 to-blue-100" />
             <div className="relative h-80 w-80 sm:h-96 sm:w-96 rounded-full overflow-hidden shadow-lg border-8 border-white z-10">
                 <Image
-                    src="/img/about-me.png"
+                    src="/img/kon.png"
                     alt="Foto profil Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 320px, 384px"
