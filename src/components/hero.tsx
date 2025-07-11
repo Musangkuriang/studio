@@ -44,10 +44,9 @@ export default function Hero() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] animate-fade-in" style={{animationDelay: '200ms'}}>
                   <Image
-                    src="/andi-siswanto.png"
+                    src="/img/kon.png"
                     alt="Andi Siswanto"
-                    width={550}
-                    height={550}
+                    fill
                     className="rounded-full border-8 border-white/50 shadow-2xl object-cover w-full h-full"
                     data-ai-hint="profile picture"
                     priority
@@ -119,10 +118,9 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px] animate-fade-in" style={{animationDelay: '600ms'}}>
                   <Image
-                    src="/andi-siswanto.png"
+                    src="/img/kon.png"
                     alt="Andi Siswanto"
-                    width={550}
-                    height={550}
+                    fill
                     className="rounded-full border-8 md:border-[12px] border-white/50 shadow-2xl object-cover w-full h-full"
                     data-ai-hint="profile picture"
                     priority
