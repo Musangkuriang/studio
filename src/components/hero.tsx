@@ -68,7 +68,7 @@ export default function Hero() {
                 Pemimpin Adaptif Berbasis Pengalaman Lapangan
               </h2>
               <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto">
-                Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
+                Membangun solusi nyata dari pengalaman lapangan, kepemimpinan berbasis komunitas, dan semangat wirausaha. Saya percaya bahwa produk, tim, dan sistem kerja yang efektif lahir dari ketulusan, inovasi, dan kemauan untuk terus belajar dan tumbuh bersama.
               </p>
               <div className="mt-8">
                 <Button
@@ -96,7 +96,7 @@ export default function Hero() {
               Pemimpin Adaptif Berbasis Pengalaman Lapangan
             </h2>
             <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0">
-              Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
+              Membangun solusi nyata dari pengalaman lapangan, kepemimpinan berbasis komunitas, dan semangat wirausaha. Saya percaya bahwa produk, tim, dan sistem kerja yang efektif lahir dari ketulusan, inovasi, dan kemauan untuk terus belajar dan tumbuh bersama.
             </p>
             <div className="mt-8">
               <Button
