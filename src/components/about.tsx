@@ -18,14 +18,15 @@ export default function About() {
     <section id="about" className="w-full bg-gray-50 py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="flex justify-center items-center">
-             <div className="relative w-96 h-96">
+          <div className="relative flex justify-center items-center">
+            <div className="absolute -inset-4 bg-gradient-to-br from-purple-200 via-blue-200 to-white rounded-full opacity-30 blur-xl"></div>
+             <div className="relative w-80 h-80 sm:w-96 sm:h-96">
                 <Image
-                    src="https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png"
+                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
                     alt="Foto profil Andi Siswanto"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="rounded-full object-cover shadow-lg border-8 border-white"
+                    sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 384px"
+                    className="rounded-full object-cover shadow-2xl border-8 border-white"
                     data-ai-hint="person profile"
                 />
              </div>
