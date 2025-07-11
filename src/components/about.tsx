@@ -18,21 +18,16 @@ export default function About() {
     <section id="about" className="w-full bg-gray-50 py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative flex justify-center items-center">
-            <div className="absolute -top-4 -left-4 z-20 animate-pulse rounded-full bg-white p-4 shadow-lg">
-              <FigmaIcon />
-            </div>
-            <div className="absolute -bottom-4 -right-4 z-0 h-24 w-24 rounded-full bg-gradient-to-br from-purple-100 to-blue-100" />
-            <div className="relative h-80 w-80 sm:h-96 sm:w-96 rounded-full overflow-hidden shadow-lg border-8 border-white z-10">
-                <Image
-                    src="/img/kon.png"
-                    alt="Foto profil Andi Siswanto"
-                    fill
-                    sizes="(max-width: 640px) 320px, 384px"
-                    className="object-cover"
-                    data-ai-hint="person profile"
-                  />
-            </div>
+          <div className="flex justify-center items-center">
+             {/* Simplified image for debugging */}
+             <Image
+                src="/img/kon.png"
+                alt="Foto profil Andi Siswanto"
+                width={384}
+                height={384}
+                className="rounded-full object-cover shadow-lg border-8 border-white"
+                data-ai-hint="person profile"
+              />
           </div>
           <div className="space-y-6">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
