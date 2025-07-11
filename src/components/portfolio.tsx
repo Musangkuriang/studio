@@ -32,7 +32,7 @@ const projects = [
     aiHint: 'healthcare telehealth'
   },
   {
-    title: 'Learning Management System',
+    title: 'Target',
     description: 'An online platform for students and teachers to manage courses, assignments, and collaborative learning.',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
     tags: ['EdTech', 'SaaS', 'Interaction Design'],
