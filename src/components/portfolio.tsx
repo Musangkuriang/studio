@@ -33,7 +33,7 @@ const projects = [
   },
   {
     title: 'Target',
-    description: 'An online platform for students and teachers to manage courses, assignments, and collaborative learning.',
+    description: 'Jika Saya Di Berikan Kesempatan Untuk Memimpin, Saya ingin Memimpin Dunia Dengan Kejujuran Dan Ketulusan',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
     tags: ['EdTech', 'SaaS', 'Interaction Design'],
     liveUrl: '#',
