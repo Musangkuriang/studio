@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
-                    src="https://images.unsplash.com/photo-1562121393-d9ec217b37b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaWxhdHxlbnwwfHx8fDE3NTIyMTI3OTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 280px, 320px"
