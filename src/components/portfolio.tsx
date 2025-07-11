@@ -5,7 +5,7 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Dashboard',
+    title: 'Pendidikan',
     description: 'A comprehensive dashboard for managing products, orders, and customers for an e-commerce platform.',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
     tags: ['UI/UX', 'React', 'Data Visualization'],
