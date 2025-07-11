@@ -39,7 +39,7 @@ export default function About() {
               Saya adalah pribadi yang tulus,adaptif, pekerja keras, dan selalu haus belajar. Memiliki pengalaman lintas bidang mulai dari teknik mesin, kewirausahaan, desain grafis, hingga kepemimpinan organisasi. Terbiasa memulai sesuatu dari nol dan membangunnya dengan ketekunan, kreativitas, dan semangat kolaboratif. Saya percaya bahwa keberhasilan dicapai bukan hanya lewat kerja keras, tapi juga lewat kejujuran, konsistensi, dan kemauan untuk terus berkembang.
             </p>
             <p className="text-lg text-gray-600">
-              With a strong foundation in user research, wireframing, prototyping, and visual design, I bring ideas to life from concept to launch. I thrive in collaborative environments and am always eager to learn and grow.
+              Dengan pengalaman di bidang teknik, wirausaha, desain visual, dan kepemimpinan tim, saya terbiasa mengubah ide menjadi solusi nyata yang berdampak. Saya berkembang dalam lingkungan kerja yang kolaboratif dan dinamis, serta selalu antusias untuk terus belajar, tumbuh, dan memberi kontribusi yang berarti.
             </p>
             <div className="flex space-x-4 pt-4">
               <Button
