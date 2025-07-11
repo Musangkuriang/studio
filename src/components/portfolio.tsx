@@ -48,7 +48,7 @@ export default function Portfolio() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            My Portfolio
+            Portofolio Saya
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
             Here are some of the projects I'm proud of. Each one was a unique challenge and a great learning experience.
