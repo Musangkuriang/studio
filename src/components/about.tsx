@@ -20,12 +20,12 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative flex justify-center items-center">
             <div className="relative h-80 w-80 sm:h-96 sm:w-96">
-              <Image
-                src="https://placehold.co/400x400.png"
-                alt="Gajah"
+            <Image
+                src="/img/about-me.png"
+                alt="Andi Siswanto"
                 fill
                 className="object-cover rounded-full"
-                data-ai-hint="elephant"
+                data-ai-hint="person working"
               />
                 <div className="absolute -top-4 -left-4 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
                 <FigmaIcon />
