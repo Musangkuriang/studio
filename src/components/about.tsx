@@ -21,11 +21,11 @@ export default function About() {
           <div className="relative flex justify-center items-center">
             <div className="relative h-80 w-80 sm:h-96 sm:w-96">
               <Image
-                src="/img/about-me.png"
-                alt="Andi Siswanto"
+                src="https://placehold.co/400x400.png"
+                alt="Gajah"
                 fill
                 className="object-cover rounded-full"
-                data-ai-hint="person working"
+                data-ai-hint="elephant"
               />
                 <div className="absolute -top-4 -left-4 z-10 animate-pulse rounded-full bg-white p-4 shadow-lg">
                 <FigmaIcon />
