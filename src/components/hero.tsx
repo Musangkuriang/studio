@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
-                    src="https://i.imgur.com/eB3sYtE.png"
+                    src="https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 280px, 320px"
@@ -119,7 +119,7 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
-                    src="https://i.imgur.com/eB3sYtE.png"
+                    src="https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 1280px) 450px, 550px"

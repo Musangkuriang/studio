@@ -21,7 +21,7 @@ export default function About() {
           <div className="flex justify-center items-center">
              <div className="relative w-96 h-96">
                 <Image
-                    src="https://i.imgur.com/eB3sYtE.png"
+                    src="https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png"
                     alt="Foto profil Andi Siswanto"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
