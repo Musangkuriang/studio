@@ -119,7 +119,7 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
-                    src="https://images.unsplash.com/photo-1562121393-d9ec217b37b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaWxhdHxlbnwwfHx8fDE3NTIyMTI3OTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 1280px) 450px, 550px"
