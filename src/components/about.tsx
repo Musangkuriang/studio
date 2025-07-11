@@ -21,8 +21,8 @@ export default function About() {
           <div className="relative flex justify-center items-center">
             <div className="relative h-80 w-80 sm:h-96 sm:w-96">
             <Image
-                src="/img/about-me.png"
-                alt="Andi Siswanto"
+                src="https://placehold.co/400x400.png"
+                alt="Placeholder image"
                 fill
                 className="object-cover rounded-full"
                 data-ai-hint="person working"
