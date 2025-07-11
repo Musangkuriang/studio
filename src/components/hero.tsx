@@ -65,7 +65,7 @@ export default function Hero() {
                 I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
-                UI/UX Designer
+                Pemimpin Adaptif Berbasis Pengalaman Lapangan
               </h2>
               <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto">
                 Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
@@ -93,7 +93,7 @@ export default function Hero() {
               I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
-              UI/UX Designer
+              Pemimpin Adaptif Berbasis Pengalaman Lapangan
             </h2>
             <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0">
               Creating beautiful and functional digital experiences that make a difference. Passionate about user-centered design and innovative solutions.
