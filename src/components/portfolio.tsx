@@ -23,7 +23,7 @@ const projects = [
     aiHint: 'mobile banking'
   },
   {
-    title: 'Healthcare Platform',
+    title: 'Karya',
     description: 'An integrated platform for patients to book appointments, consult with doctors, and manage medical records.',
     image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
     tags: ['HealthTech', 'User Research', 'Prototyping'],
