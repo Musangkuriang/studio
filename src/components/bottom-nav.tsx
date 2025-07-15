@@ -1,7 +1,8 @@
+
 'use client';
 
 import Link from 'next/link';
-import { Home, User, LayoutGrid, Mail } from 'lucide-react';
+import { Home, User, LayoutGrid, Mail, Share2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -9,6 +10,7 @@ const navItems = [
   { href: '#home', icon: Home, label: 'Home' },
   { href: '#portfolio', icon: LayoutGrid, label: 'Portfolio' },
   { href: '#about', icon: User, label: 'About', isCenter: true },
+  { href: '#', icon: Share2, label: 'Social' },
   { href: '#contact', icon: Mail, label: 'Contact' },
 ];
 
@@ -51,7 +53,7 @@ export default function BottomNav() {
       <Link
         href={item.href}
         key={item.label}
-        className="flex flex-col items-center justify-center gap-1 transition-colors duration-300 w-1/4"
+        className="flex flex-col items-center justify-center gap-1 transition-colors duration-300 w-[20%]"
       >
         <item.icon
           className={cn(
@@ -71,21 +73,26 @@ export default function BottomNav() {
     );
   };
 
+  const regularItems = navItems.filter(item => !item.isCenter);
   const centerItem = navItems.find(item => item.isCenter);
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      <div className="relative mx-auto max-w-sm h-24 flex justify-center items-end">
-        <div className="absolute bottom-4 flex items-center h-16 w-[calc(100%-2rem)] bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg">
-          <div className="flex w-full h-full items-center">
-            {renderNavItem(navItems[0])}
-            {renderNavItem(navItems[1])}
-            <div className="w-1/4"></div> {/* Placeholder for center button */}
-            {renderNavItem(navItems[3])}
+      <div className="relative mx-auto max-w-sm h-24 flex justify-center items-end pb-4">
+        {/* Main Nav Bar */}
+        <div className="flex items-center h-16 w-[calc(100%-2rem)] bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg">
+          <div className="flex justify-around w-full h-full items-center">
+            {renderNavItem(regularItems[0])}
+            {renderNavItem(regularItems[1])}
+            <div className="w-[20%]"></div> {/* Placeholder for center button */}
+            {renderNavItem(regularItems[2])}
+            {renderNavItem(regularItems[3])}
           </div>
         </div>
+        
+        {/* Center Button */}
         {centerItem && (
-          <Link href={centerItem.href} className="absolute top-0 transform -translate-y-1/3">
+          <Link href={centerItem.href} className="absolute top-0">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 shadow-lg transition-transform duration-300 hover:scale-110">
               <centerItem.icon className="h-8 w-8 text-white" />
             </div>
