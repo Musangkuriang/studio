@@ -10,7 +10,7 @@ const navItems = [
   { href: '#home', icon: Home, label: 'Home' },
   { href: '#portfolio', icon: LayoutGrid, label: 'Portfolio' },
   { href: '#about', icon: User, label: 'About', isCenter: true },
-  { href: '#', icon: Share2, label: 'Social' },
+  { href: '#footer', icon: Share2, label: 'Social' },
   { href: '#contact', icon: Mail, label: 'Contact' },
 ];
 
@@ -18,7 +18,7 @@ export default function BottomNav() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'portfolio', 'contact'];
+    const sections = ['home', 'about', 'portfolio', 'contact', 'footer'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
