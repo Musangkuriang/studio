@@ -28,7 +28,8 @@ export default function Header() {
 
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300", 
-        isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-transparent',
+        "hidden md:block" // Hide header on mobile
     )}>
       <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center">
