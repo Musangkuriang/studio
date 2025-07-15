@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Pendidikan',
     description: 'Pendidikan Terakhir SMA/SMK Sederajat',
-    image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
+    image: 'https://placehold.co/600x400.png',
     tags: ['UI/UX', 'React', 'Data Visualization'],
     liveUrl: '#',
     githubUrl: '#',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Pengalaman Kerja',
     description: 'Saya Memiliki Beberapa Pengalaman Kerja Mulai Dari Kepemimpinan,Wirausaha,Web Developer,Kerja Lapangan Dll',
-    image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
+    image: 'https://placehold.co/600x400.png',
     tags: ['Mobile Design', 'Pengawas Desa', 'Pelatih & Pembina Pencak Silat'],
     liveUrl: '#',
     githubUrl: '#',
@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Karya',
     description: 'Saya Memiliki Beberapa Karya Yang Berhasil Saya Bangun Dari Web Developer Dan Desain Grafis',
-    image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
+    image: 'https://placehold.co/600x400.png',
     tags: ['Web Aplikasi', 'Desain Grafis', 'Prestasi Kepemimpinan'],
     liveUrl: '#',
     githubUrl: '#',
@@ -34,7 +34,7 @@ const projects = [
   {
     title: 'Target',
     description: 'Jika Saya Di Berikan Kesempatan Untuk Memimpin, Saya ingin Memimpin Dunia Dengan Kejujuran Dan Ketulusan',
-    image: 'https://i.ibb.co/sKq5x9b/e-B3s-Yt-E.png',
+    image: 'https://placehold.co/600x400.png',
     tags: ['EdTech', 'SaaS', 'Interaction Design'],
     liveUrl: '#',
     githubUrl: '#',
