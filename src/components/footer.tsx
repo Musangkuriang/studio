@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="w-full border-t border-gray-200 bg-white">
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3 animate-fade-in opacity-0 [animation-delay:200ms]">
           <div className="space-y-4">
             <Link href="#home" className="flex items-center">
               <span className="text-3xl font-extrabold text-gradient">AS</span>
@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-8 text-center text-base text-gray-500">
+        <div className="mt-12 border-t border-gray-200 pt-8 text-center text-base text-gray-500 animate-fade-in opacity-0 [animation-delay:300ms]">
           <p className="flex items-center justify-center">
             © {new Date().getFullYear()} Andi Siswanto. Made with <Heart className="mx-1 h-5 w-5 text-red-500 fill-current" /> in Jakarta.
           </p>
