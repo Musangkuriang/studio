@@ -15,7 +15,7 @@ const FigmaIcon = () => (
 
 export default function About() {
   return (
-    <section id="about" className="w-full bg-gray-50 py-20 md:py-32 animated-section">
+    <section id="about" className="w-full bg-gray-50 py-20 md:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative flex justify-center items-center">

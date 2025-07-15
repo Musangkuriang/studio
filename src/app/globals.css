@@ -94,28 +94,4 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .animated-section > * {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    transition-delay: 0.2s;
-  }
-
-  .animated-section.is-visible > * {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .animated-section.is-visible > *:nth-child(2) { transition-delay: 0.3s; }
-  .animated-section.is-visible > *:nth-child(3) { transition-delay: 0.4s; }
-  .animated-section.is-visible > *:nth-child(4) { transition-delay: 0.5s; }
-  .animated-section.is-visible > .grid > * {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  .animated-section.is-visible > .grid.is-visible > * {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

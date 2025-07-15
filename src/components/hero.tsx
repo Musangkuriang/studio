@@ -38,7 +38,7 @@ const WavingHandIcon = () => (
 export default function Hero() {
   return (
     <section id="home" className="w-full bg-white overflow-hidden">
-      <div className="animated-section">
+      <div>
       <div className="lg:hidden">
         {/* Mobile Layout */}
         <div className="bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-24 pb-12 rounded-b-3xl">

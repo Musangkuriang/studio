@@ -24,11 +24,13 @@ export default function BottomNav() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
+            // Map ai-optimizer section to portfolio nav item
             setActiveSection(id === 'ai-optimizer' ? 'portfolio' : id);
-            entry.target.classList.add('is-visible');
           }
         });
       },
+      // This threshold means the callback will trigger when 50% of the target is visible.
+      // Adjusting rootMargin to better detect sections that are in the middle of the viewport.
       { rootMargin: '-50% 0px -50% 0px', threshold: 0.2 }
     );
 
@@ -54,10 +56,6 @@ export default function BottomNav() {
     if (item.href === '#portfolio' && activeSection === 'ai-optimizer') {
       isActive = true;
     }
-    if (item.href === '#footer' && activeSection === 'footer') {
-      isActive = true;
-    }
-
 
     return (
       <Link
