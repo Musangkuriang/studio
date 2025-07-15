@@ -72,10 +72,6 @@ export default function Header() {
                             <span className="text-xl font-bold text-white">AS</span>
                         </div>
                     </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
                 </div>
                 <nav className="mt-8 flex flex-col space-y-6">
                   {navLinks.map((link) => (
