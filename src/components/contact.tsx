@@ -8,11 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageSquare } from 'lucide-react';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -21,19 +20,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'andi.s@example.com',
-    href: 'mailto:andi.s@example.com',
+    value: 'Datpindah@gmail.com',
+    href: 'mailto:Datpindah@gmail.com',
   },
   {
     icon: Phone,
     title: 'Phone',
-    value: '+62 812 3456 7890',
-    href: 'tel:+6281234567890',
+    value: '+62895335793521',
+    href: 'tel:+62895335793521',
   },
   {
     icon: MapPin,
     title: 'Location',
-    value: 'Jakarta, Indonesia',
+    value: 'Tuban, Jawa Timur',
   },
 ];
 
@@ -41,15 +40,16 @@ export default function Contact() {
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: '', email: '', message: '' },
+    defaultValues: { name: '', message: '' },
   });
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
-    console.log(data);
-    // Simulate form submission
+    const message = `Hello, my name is ${data.name}. ${data.message}`;
+    const whatsappUrl = `https://wa.me/62895335793521?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
     toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: 'Redirecting to WhatsApp',
+      description: 'Your message is ready to be sent.',
     });
     form.reset();
   };
@@ -105,19 +105,6 @@ export default function Contact() {
                 />
                 <FormField
                   control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-base">Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} className="py-6" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
@@ -135,7 +122,8 @@ export default function Contact() {
                   className="w-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] py-7 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   disabled={form.formState.isSubmitting}
                 >
-                  Send Message
+                  Send via WhatsApp
+                  <MessageSquare className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </Form>
