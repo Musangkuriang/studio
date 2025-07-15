@@ -24,7 +24,7 @@ export default function BottomNav() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
-            setActiveSection(id);
+            setActiveSection(id === 'ai-optimizer' ? 'portfolio' : id);
             entry.target.classList.add('is-visible');
           }
         });
@@ -50,7 +50,15 @@ export default function BottomNav() {
   }, []);
 
   const renderNavItem = (item: (typeof navItems)[0]) => {
-    const isActive = activeSection === item.href.substring(1);
+    let isActive = activeSection === item.href.substring(1);
+    if (item.href === '#portfolio' && activeSection === 'ai-optimizer') {
+      isActive = true;
+    }
+    if (item.href === '#footer' && activeSection === 'footer') {
+      isActive = true;
+    }
+
+
     return (
       <Link
         href={item.href}
@@ -81,21 +89,21 @@ export default function BottomNav() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
       <div className="relative mx-auto max-w-sm h-24 flex justify-center items-end pb-4">
-        {/* Main Nav Bar */}
         <div className="flex items-center h-16 w-[calc(100%-2rem)] bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg">
           <div className="flex justify-around w-full h-full items-center">
             {renderNavItem(regularItems[0])}
             {renderNavItem(regularItems[1])}
-            <div className="w-[20%]"></div> {/* Placeholder for center button */}
+            <div className="w-[20%]"></div>
             {renderNavItem(regularItems[2])}
             {renderNavItem(regularItems[3])}
           </div>
         </div>
         
-        {/* Center Button */}
         {centerItem && (
           <Link href={centerItem.href} className="absolute top-0">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 shadow-lg transition-transform duration-300 hover:scale-110">
+            <div className={cn("flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 shadow-lg transition-transform duration-300 hover:scale-110",
+                activeSection === 'about' && 'scale-110 ring-4 ring-white'
+            )}>
               <centerItem.icon className="h-8 w-8 text-white" />
             </div>
           </Link>
