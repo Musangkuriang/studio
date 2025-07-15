@@ -37,12 +37,12 @@ const WavingHandIcon = () => (
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full bg-white overflow-hidden">
+    <section id="home" className="w-full bg-white overflow-hidden animated-section">
       <div className="lg:hidden">
         {/* Mobile Layout */}
         <div className="bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-24 pb-12 rounded-b-3xl">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] animate-fade-in opacity-0 [animation-delay:200ms]">
+              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
                     src="https://i.imghippo.com/files/JwEZ2712aXI.png"
                     alt="Andi Siswanto"
@@ -60,17 +60,17 @@ export default function Hero() {
         </div>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
            <div className="text-center">
-              <p className="text-lg text-gray-600 mb-2 animate-fade-in opacity-0 [animation-delay:400ms]">Hello,</p>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 animate-fade-in opacity-0 [animation-delay:500ms]">
+              <p className="text-lg text-gray-600 mb-2">Hello,</p>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
                 I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3 animate-fade-in opacity-0 [animation-delay:600ms]">
+              <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
                 Pemimpin Adaptif Berbasis Pengalaman Lapangan
               </h2>
-              <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto animate-fade-in opacity-0 [animation-delay:700ms]">
+              <p className="mt-6 max-w-xl text-lg text-gray-500 mx-auto">
                 Membangun solusi nyata dari pengalaman lapangan, kepemimpinan berbasis komunitas, dan semangat wirausaha. Saya percaya bahwa produk, tim, dan sistem kerja yang efektif lahir dari ketulusan, inovasi, dan kemauan untuk terus belajar dan tumbuh bersama.
               </p>
-              <div className="mt-8 animate-fade-in opacity-0 [animation-delay:800ms]">
+              <div className="mt-8">
                 <Button
                   asChild
                   size="lg"
@@ -88,17 +88,17 @@ export default function Hero() {
         {/* Desktop Layout */}
         <div className="flex items-center min-h-screen">
           <div className="w-1/2 pr-10 text-left z-10">
-            <p className="text-lg text-gray-600 mb-2 animate-fade-in opacity-0 [animation-delay:400ms]">Hello,</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 animate-fade-in opacity-0 [animation-delay:500ms]">
+            <p className="text-lg text-gray-600 mb-2">Hello,</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
               I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3 animate-fade-in opacity-0 [animation-delay:600ms]">
+            <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
               Pemimpin Adaptif Berbasis Pengalaman Lapangan
             </h2>
-            <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0 animate-fade-in opacity-0 [animation-delay:700ms]">
+            <p className="mt-6 max-w-xl text-lg text-gray-500 mx-0">
               Membangun solusi nyata dari pengalaman lapangan, kepemimpinan berbasis komunitas, dan semangat wirausaha. Saya percaya bahwa produk, tim, dan sistem kerja yang efektif lahir dari ketulusan, inovasi, dan kemauan untuk terus belajar dan tumbuh bersama.
             </p>
-            <div className="mt-8 animate-fade-in opacity-0 [animation-delay:800ms]">
+            <div className="mt-8">
               <Button
                 asChild
                 size="lg"
@@ -116,7 +116,7 @@ export default function Hero() {
                 <div className="absolute -bottom-1/4 -left-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-tr from-purple-200 to-white opacity-40" />
                 <div className="absolute -top-1/4 -right-1/4 w-3/4 h-3/4 rounded-full bg-gradient-to-bl from-blue-200 to-white opacity-40" />
             </div>
-            <div className="relative w-full h-full flex items-center justify-center animate-fade-in opacity-0 [animation-delay:200ms]">
+            <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
                     src="https://i.imghippo.com/files/JwEZ2712aXI.png"

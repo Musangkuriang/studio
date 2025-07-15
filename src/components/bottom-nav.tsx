@@ -18,16 +18,18 @@ export default function BottomNav() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'portfolio', 'contact', 'footer'];
+    const sections = ['home', 'about', 'portfolio', 'contact', 'footer', 'ai-optimizer'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            const id = entry.target.id;
+            setActiveSection(id);
+            entry.target.classList.add('is-visible');
           }
         });
       },
-      { rootMargin: '-50% 0px -50% 0px' }
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0.2 }
     );
 
     sections.forEach((id) => {

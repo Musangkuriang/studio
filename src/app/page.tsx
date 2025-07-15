@@ -8,7 +8,7 @@ import Footer from '@/components/footer';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between animate-fade-in opacity-0">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="w-full relative">
         <Header />
         <Hero />

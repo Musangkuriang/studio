@@ -55,19 +55,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-20 md:py-32">
+    <section id="contact" className="w-full bg-white py-20 md:py-32 animated-section">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl animate-fade-in opacity-0 [animation-delay:200ms]">
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Get In Touch
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 animate-fade-in opacity-0 [animation-delay:300ms]">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
             Have a project in mind or just want to say hello? I'd love to hear from you.
           </p>
         </div>
 
         <div className="mt-16 grid gap-16 lg:grid-cols-2">
-          <div className="space-y-8 animate-fade-in opacity-0 [animation-delay:400ms]">
+          <div className="space-y-8">
             {contactInfo.map((item, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-blue-100">
@@ -87,7 +87,7 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="animate-fade-in opacity-0 [animation-delay:500ms]">
+          <div>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField

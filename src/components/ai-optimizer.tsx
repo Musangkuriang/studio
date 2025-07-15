@@ -80,19 +80,19 @@ export default function AiOptimizer() {
   );
 
   return (
-    <section id="ai-optimizer" className="w-full bg-gray-50 py-20 md:py-32">
+    <section id="ai-optimizer" className="w-full bg-gray-50 py-20 md:py-32 animated-section">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl flex items-center justify-center gap-4 animate-fade-in opacity-0 [animation-delay:200ms]">
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl flex items-center justify-center gap-4">
             <Wand2 className="w-10 h-10 text-primary" />
             AI Portfolio Optimizer
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 animate-fade-in opacity-0 [animation-delay:300ms]">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
             Leverage AI to tailor your portfolio for your dream job. Get suggestions on which project to highlight and how to improve your project descriptions.
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={(value) => { setActiveTab(value); setResult(null); }} className="mt-12 w-full animate-fade-in opacity-0 [animation-delay:400ms]">
+        <Tabs value={activeTab} onValueChange={(value) => { setActiveTab(value); setResult(null); }} className="mt-12 w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
             <TabsTrigger value="highlight">
               <Lightbulb className="mr-2 h-4 w-4" />

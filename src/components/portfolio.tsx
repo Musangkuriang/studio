@@ -44,20 +44,20 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="w-full bg-white py-20 md:py-32">
+    <section id="portfolio" className="w-full bg-white py-20 md:py-32 animated-section">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl animate-fade-in opacity-0 [animation-delay:200ms]">
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Portofolio Saya
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 animate-fade-in opacity-0 [animation-delay:300ms]">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
             Here are some of the projects I'm proud of. Each one was a unique challenge and a great learning experience.
           </p>
         </div>
 
         <div className="mt-16 grid gap-10 sm:grid-cols-1 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in opacity-0" style={{ animationDelay: `${400 + index * 100}ms` }}>
+            <div key={index} className="group relative overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-64 w-full">
                 <Image
                   src={project.image}
