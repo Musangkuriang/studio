@@ -99,7 +99,6 @@ export default function Portfolio() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       data-ai-hint={project.aiHint}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                   <div className="p-6">
                     <h3 className="font-headline text-2xl font-bold text-gray-900">{project.title}</h3>
