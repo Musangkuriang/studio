@@ -43,7 +43,7 @@ const projects = [
   {
     title: 'Karya',
     description: 'Saya Memiliki Beberapa Karya Yang Berhasil Saya Bangun Dari Web Developer Dan Desain Grafis',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://i.imghippo.com/files/hyoC1966OOY.png',
     tags: ['Web Aplikasi', 'Desain Grafis', 'Prestasi Kepemimpinan'],
     liveUrl: '#',
     githubUrl: '#',
@@ -51,7 +51,7 @@ const projects = [
     details: {
       title: "Detail Karya",
       description: "Bagian ini untuk memamerkan karya-karya Anda. Tampilkan proyek web, hasil desain grafis, atau bukti pencapaian kepemimpinan. Jelaskan proses dan hasil dari setiap karya.",
-      image: 'https://placehold.co/800x600.png',
+      image: 'https://i.imghippo.com/files/hyoC1966OOY.png',
       aiHint: 'creative design'
     }
   },
