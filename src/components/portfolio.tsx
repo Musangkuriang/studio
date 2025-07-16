@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'Pendidikan',
     description: 'Pendidikan Terakhir SMA/SMK Sederajat',
-    image: 'https://i.imghippo.com/files/WoL4988dco.png',
+    image: 'https://i.imghippo.com/files/iruC6868MxM.png',
     tags: ['SMA/SMK Sederajat'],
     liveUrl: '#',
     githubUrl: '#',
@@ -21,7 +21,7 @@ const projects = [
     details: {
       title: "Detail Pendidikan",
       description: "Ini adalah deskripsi detail tentang latar belakang pendidikan saya. Anda dapat mengisinya dengan riwayat sekolah, kursus yang relevan, atau pencapaian akademis lainnya.",
-      image: 'https://i.imghippo.com/files/WoL4988dco.png',
+      image: 'https://i.imghippo.com/files/iruC6868MxM.png',
       aiHint: 'education school'
     }
   },
