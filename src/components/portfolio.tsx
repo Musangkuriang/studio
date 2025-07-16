@@ -8,6 +8,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Globe, FileText, BarChart2, Shield } from 'lucide-react';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -86,7 +88,27 @@ Membina generasi muda dalam pencak silat. Murid berhasil meraih prestasi hingga 
     aiHint: 'creative design',
     details: {
       title: "Detail Karya",
-      description: "Bagian ini untuk memamerkan karya-karya Anda. Tampilkan proyek web, hasil desain grafis, atau bukti pencapaian kepemimpinan. Jelaskan proses dan hasil dari setiap karya.",
+      description: `🧩 Proyek / Karya Digital
+1. Web Aplikasi Pengajuan Dokumen – Kantor Hukum & Advokat
+🌐 pengajuandokumen.netlify.app
+Aplikasi berbasis web yang memudahkan klien dalam mengajukan dokumen hukum secara online.
+Mempermudah proses administratif dengan alur pengajuan, pelacakan status, dan pengelolaan data klien.
+Dirancang dengan antarmuka yang sederhana dan mudah digunakan, baik oleh klien maupun admin.
+2. Web Aplikasi Penilaian Pencak Silat
+🌐 silatscore.netlify.app
+Sistem digital untuk mencatat dan menghitung skor dalam kejuaraan pencak silat.
+Mendukung transparansi, efisiensi waktu, dan akurasi dalam penilaian pertandingan.
+Dibuat berdasarkan pengalaman pribadi sebagai pelatih dan penyelenggara kejuaraan lokal.
+3. Dashboard Absensi – Google Spreadsheet (Otomatisasi dengan Apps Script)
+📊 Lihat Absen Dashboard
+Dashboard untuk mencatat dan memantau kehadiran anggota atau peserta kegiatan.
+Dibuat dengan Google Apps Script dan Spreadsheet, sehingga praktis dan bisa langsung digunakan online.
+Cocok digunakan untuk organisasi, sekolah, atau komunitas.
+4. Dashboard Laporan Penjualan – Google Spreadsheet (Realtime & Online)
+📈 Lihat Dashboard Penjualan
+Menyajikan laporan penjualan harian/mingguan secara otomatis dari data input.
+Visualisasi ringkas dan informatif untuk memudahkan pemilik usaha dalam pengambilan keputusan.
+Efektif digunakan dalam usaha kecil atau UMKM yang ingin mengelola data secara efisien tanpa software mahal.`,
       image: 'https://i.imghippo.com/files/hyoC1966OOY.png',
       aiHint: 'creative design'
     }
@@ -188,6 +210,63 @@ const renderEducationDetails = (description: string) => {
     );
 };
   
+const renderCreationsDetails = (description: string) => {
+    const lines = description.split('\n').filter(line => line.trim() !== '');
+    const title = lines.shift() || '';
+
+    const creations: { title: string; link?: string; points: string[] }[] = [];
+    let currentCreation: { title: string; link?: string; points: string[] } | null = null;
+
+    for (const line of lines) {
+        if (/^\d+\./.test(line)) {
+            if (currentCreation) creations.push(currentCreation);
+            currentCreation = { title: line.replace(/^\d+\.\s*/, ''), points: [] };
+        } else if (line.startsWith('🌐') || line.startsWith('📊') || line.startsWith('📈')) {
+            if (currentCreation) {
+                const [icon, ...rest] = line.split(' ');
+                const linkText = rest.join(' ');
+                const url = linkText.startsWith('http') || linkText.startsWith('pengajuan') || linkText.startsWith('silatscore') ? `https://${linkText.replace(/^(https?:\/\/)/, '')}` : '#';
+                currentCreation.link = url;
+            }
+        } else {
+            if (currentCreation) currentCreation.points.push(line);
+        }
+    }
+    if (currentCreation) creations.push(currentCreation);
+
+    const getIcon = (title: string) => {
+        if (title.toLowerCase().includes('dokumen')) return <FileText className="h-6 w-6 text-primary" />;
+        if (title.toLowerCase().includes('pencak silat')) return <Shield className="h-6 w-6 text-primary" />;
+        if (title.toLowerCase().includes('dashboard')) return <BarChart2 className="h-6 w-6 text-primary" />;
+        return <Globe className="h-6 w-6 text-primary" />;
+    };
+
+    return (
+        <div>
+            <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+            <div className="space-y-6">
+                {creations.map((creation, index) => (
+                    <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50 flex items-start gap-4">
+                        <div className="flex-shrink-0 pt-1">{getIcon(creation.title)}</div>
+                        <div>
+                            <h5 className="font-bold text-gray-900 text-lg">{creation.title}</h5>
+                            {creation.link && (
+                                <Link href={creation.link} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline inline-flex items-center gap-1 mb-2">
+                                    Lihat Proyek <Globe className="h-3 w-3"/>
+                                </Link>
+                            )}
+                            <ul className="list-disc list-inside space-y-1 text-gray-600">
+                                {creation.points.map((point, i) => (
+                                    <li key={i}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
 export default function Portfolio() {
   return (
@@ -249,6 +328,8 @@ export default function Portfolio() {
                             ? renderExperienceDetails(project.details.description) 
                             : project.title === 'Pendidikan'
                             ? renderEducationDetails(project.details.description)
+                            : project.title === 'Karya'
+                            ? renderCreationsDetails(project.details.description)
                             : <div className="whitespace-pre-line">{project.details.description}</div>
                         }
                       </div>
