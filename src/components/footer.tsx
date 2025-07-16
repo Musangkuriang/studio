@@ -1,10 +1,17 @@
 import Link from 'next/link';
-import { Github, Instagram, Twitter, Heart } from 'lucide-react';
+import { Github, Instagram, Heart } from 'lucide-react';
+
+const TiktokIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <path d="M21 7.5a4.5 4.5 0 0 1-4.5 4.5H12V7a4 4 0 0 1 4-4h1a4.5 4.5 0 0 1 4.5 4.5v1Z" />
+        <path d="M16.5 16.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
+    </svg>
+)
 
 const socialLinks = [
   { icon: Github, href: '#' },
   { icon: Instagram, href: '#' },
-  { icon: Twitter, href: '#' },
+  { icon: TiktokIcon, href: '#' },
 ];
 
 export default function Footer() {
@@ -49,7 +56,7 @@ export default function Footer() {
             <div className="mt-4 flex space-x-4">
               {socialLinks.map((social, index) => (
                 <Link key={index} href={social.href} className="text-gray-500 hover:text-primary transition-colors">
-                  <social.icon className="h-6 w-6" />
+                  <social.icon />
                 </Link>
               ))}
             </div>
