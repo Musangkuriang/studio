@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Globe, FileText, BarChart2, Shield } from 'lucide-react';
+import { Globe, FileText, BarChart2, Shield, Target as TargetIcon, Briefcase, GraduationCap, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 const projects = [
@@ -122,8 +122,25 @@ Efektif digunakan dalam usaha kecil atau UMKM yang ingin mengelola data secara e
     githubUrl: '#',
     aiHint: 'leadership world',
     details: {
-      title: "Detail Target & Visi",
-      description: "Jelaskan visi kepemimpinan Anda di sini. Uraikan bagaimana Anda akan menerapkan nilai-nilai seperti kejujuran dan ketulusan dalam memimpin, serta target-target spesifik yang ingin Anda capai.",
+      title: "Visi & Target Jangka Panjang",
+      description: `🎯 Visi & Target Jangka Panjang
+Saya memiliki target jangka panjang untuk menjadi seorang pebisnis digital dan kuliner yang memadukan pengalaman praktis, kreativitas, dan pemanfaatan teknologi. Tujuan saya bukan hanya membangun usaha, tapi juga menghadirkan solusi dan produk yang benar-benar berguna bagi masyarakat.
+
+Target yang sedang saya bangun:
+
+🔹 Menjual dan menyewakan produk digital buatan saya, seperti:
+- Dashboard Google Spreadsheet (untuk absensi, penjualan, dan operasional lainnya),
+- Aplikasi berbasis web untuk efisiensi kerja (pengajuan dokumen, sistem penilaian, dsb.),
+- Aplikasi skor pencak silat untuk dipakai dalam event atau pelatihan.
+
+🔹 Membuka layanan jasa pembuatan aplikasi sederhana untuk UMKM, organisasi, dan komunitas lokal yang ingin go digital tanpa biaya mahal.
+
+🔹 Mengembangkan kembali usaha kuliner, dengan pendekatan lebih modern—termasuk dari sisi branding, desain kemasan, dan pemasaran digital. Pengalaman saya di bidang makanan (pentol keliling & frozen food) menjadi pondasi kuat untuk masuk ke sektor ini.
+
+🔹 Dalam 3–5 tahun ke depan, saya ingin memiliki:
+- Satu brand digital aktif (produk/jasa digital),
+- Satu brand kuliner lokal yang berjalan stabil,
+- Dan jaringan relasi bisnis yang solid di sektor digital, komunitas, dan kuliner.`,
       image: 'https://i.imghippo.com/files/AAC6024kg.png',
       aiHint: 'leadership vision'
     }
@@ -151,7 +168,9 @@ const renderExperienceDetails = (description: string) => {
   
     return (
       <div>
-        <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+        <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+            <Briefcase className="h-6 w-6 text-primary"/> {title}
+        </h4>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
             <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50">
@@ -181,16 +200,18 @@ const renderEducationDetails = (description: string) => {
         if (currentInstitution) institutions.push(currentInstitution);
         currentInstitution = { name: line, details: [], points: [] };
       } else if (line.startsWith('📍') || line.startsWith('Jurusan:') || line.startsWith('🗓️')) {
-        if (currentInstitution) currentInstitution.details.push(line);
+        if (currentInstitution) currentInstitution.details.push(line.trim());
       } else {
-        if (currentInstitution) currentInstitution.points.push(line);
+        if (currentInstitution) currentInstitution.points.push(line.trim());
       }
     });
     if (currentInstitution) institutions.push(currentInstitution);
   
     return (
       <div>
-        <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+        <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+            <GraduationCap className="h-6 w-6 text-primary" /> {title}
+        </h4>
         <div className="space-y-6">
           {institutions.map((inst, index) => (
             <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50">
@@ -229,7 +250,7 @@ const renderCreationsDetails = (description: string) => {
                 currentCreation.link = url;
             }
         } else {
-            if (currentCreation) currentCreation.points.push(line);
+            if (currentCreation) currentCreation.points.push(line.trim());
         }
     }
     if (currentCreation) creations.push(currentCreation);
@@ -243,7 +264,9 @@ const renderCreationsDetails = (description: string) => {
 
     return (
         <div>
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+            <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                <Sparkles className="h-6 w-6 text-primary" /> {title}
+            </h4>
             <div className="space-y-6">
                 {creations.map((creation, index) => (
                     <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50 flex items-start gap-4">
@@ -257,7 +280,7 @@ const renderCreationsDetails = (description: string) => {
                             )}
                             <ul className="list-disc list-inside space-y-1 text-gray-600">
                                 {creation.points.map((point, i) => (
-                                    <li key={i}>{point}</li>
+                                    point && <li key={i}>{point}</li>
                                 ))}
                             </ul>
                         </div>
@@ -267,6 +290,53 @@ const renderCreationsDetails = (description: string) => {
         </div>
     );
 };
+
+const renderTargetDetails = (description: string) => {
+    const lines = description.split('\n').filter(line => line.trim() !== '');
+    const title = lines.shift() || '';
+    const intro = lines.shift() || '';
+    
+    // Skip "Target yang sedang saya bangun:"
+    const targetLines = lines.slice(1);
+    
+    const targets: { main: string; sub: string[] }[] = [];
+    let currentTarget: { main: string; sub: string[] } | null = null;
+
+    targetLines.forEach(line => {
+        const trimmedLine = line.trim();
+        if (trimmedLine.startsWith('🔹')) {
+            if (currentTarget) targets.push(currentTarget);
+            currentTarget = { main: trimmedLine.replace('🔹', '').trim(), sub: [] };
+        } else if (trimmedLine.startsWith('-') && currentTarget) {
+            currentTarget.sub.push(trimmedLine.replace('-', '').trim());
+        }
+    });
+    if (currentTarget) targets.push(currentTarget);
+
+    return (
+        <div>
+            <h4 className="text-xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <TargetIcon className="h-6 w-6 text-primary" /> {title}
+            </h4>
+            <p className="text-gray-600 mb-6">{intro}</p>
+            <h5 className="font-bold text-gray-900 text-lg mb-4">Target yang sedang saya bangun:</h5>
+            <div className="space-y-4">
+                {targets.map((target, index) => (
+                    <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50">
+                        <p className="font-semibold text-gray-800">{target.main}</p>
+                        {target.sub.length > 0 && (
+                            <ul className="list-disc list-inside space-y-1 text-gray-600 mt-2 pl-4">
+                                {target.sub.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 
 export default function Portfolio() {
   return (
@@ -309,7 +379,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-md sm:max-w-3xl p-0 flex flex-col max-h-[90vh]">
+              <DialogContent className="sm:max-w-3xl max-w-[90vw] rounded-lg p-0 flex flex-col max-h-[90vh]">
                 <div className="relative h-56 w-full flex-shrink-0">
                   <Image
                     src={project.details.image}
@@ -330,6 +400,8 @@ export default function Portfolio() {
                             ? renderEducationDetails(project.details.description)
                             : project.title === 'Karya'
                             ? renderCreationsDetails(project.details.description)
+                            : project.title === 'Target'
+                            ? renderTargetDetails(project.details.description)
                             : <div className="whitespace-pre-line">{project.details.description}</div>
                         }
                       </div>
