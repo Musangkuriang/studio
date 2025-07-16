@@ -43,9 +43,9 @@ export default function Hero() {
         {/* Mobile Layout */}
         <div className="bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-24 pb-12 rounded-b-3xl">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-              <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
+              <div className="relative mx-auto w-[260px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
-                    src="https://i.imghippo.com/files/WoL4988dco.png"
+                    src="https://i.imghippo.com/files/D2381MoM.jpeg"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 280px, 320px"
@@ -63,7 +63,7 @@ export default function Hero() {
            <div className="text-center">
               <p className="text-lg text-gray-600 mb-2">Hello,</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-                I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
+                Saya <span className="text-gradient-john-ray">Andi Siswanto</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
                 Pemimpin Adaptif Berbasis Pengalaman Lapangan
@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="w-1/2 pr-10 text-left z-10">
             <p className="text-lg text-gray-600 mb-2">Hello,</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-              I Am <span className="text-gradient-john-ray">Andi Siswanto</span>
+              Saya <span className="text-gradient-john-ray">Andi Siswanto</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mt-3">
               Pemimpin Adaptif Berbasis Pengalaman Lapangan
@@ -120,7 +120,7 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
-                    src="https://i.imghippo.com/files/WoL4988dco.png"
+                    src="https://i.imghippo.com/files/D2381MoM.jpeg"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 1280px) 450px, 550px"
