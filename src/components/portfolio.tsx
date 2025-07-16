@@ -13,15 +13,15 @@ const projects = [
   {
     title: 'Pendidikan',
     description: 'Pendidikan Terakhir SMA/SMK Sederajat',
-    image: 'https://placehold.co/600x400.png',
-    tags: ['UI/UX', 'React', 'Data Visualization'],
+    image: 'https://i.imghippo.com/files/WoL4988dco.png',
+    tags: ['SMA/SMK Sederajat'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'dashboard analytics',
+    aiHint: 'education person',
     details: {
       title: "Detail Pendidikan",
       description: "Ini adalah deskripsi detail tentang latar belakang pendidikan saya. Anda dapat mengisinya dengan riwayat sekolah, kursus yang relevan, atau pencapaian akademis lainnya.",
-      image: 'https://placehold.co/800x600.png',
+      image: 'https://i.imghippo.com/files/WoL4988dco.png',
       aiHint: 'education school'
     }
   },
