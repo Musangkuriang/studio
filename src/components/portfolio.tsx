@@ -79,7 +79,7 @@ Membina generasi muda dalam pencak silat. Murid berhasil meraih prestasi hingga 
     tags: ['Web Aplikasi', 'Desain Grafis', 'Prestasi Kepemimpinan'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'healthcare telehealth',
+    aiHint: 'creative design',
     details: {
       title: "Detail Karya",
       description: "Bagian ini untuk memamerkan karya-karya Anda. Tampilkan proyek web, hasil desain grafis, atau bukti pencapaian kepemimpinan. Jelaskan proses dan hasil dari setiap karya.",
@@ -103,6 +103,45 @@ Membina generasi muda dalam pencak silat. Murid berhasil meraih prestasi hingga 
     }
   },
 ];
+
+const renderExperienceDetails = (description: string) => {
+    const lines = description.split('\n').filter(line => line.trim() !== '');
+    const title = lines.shift(); 
+  
+    const experiences = [];
+    let currentExperience: { title: string; location: string; points: string[] } | null = null;
+  
+    for (const line of lines) {
+      if (/^\d+\./.test(line)) { 
+        if (currentExperience) experiences.push(currentExperience);
+        currentExperience = { title: line.replace(/^\d+\.\s*/, ''), location: '', points: [] };
+      } else if (line.startsWith('📍')) {
+        if (currentExperience) currentExperience.location = line.replace('📍', '').trim();
+      } else {
+        if (currentExperience) currentExperience.points.push(line);
+      }
+    }
+    if (currentExperience) experiences.push(currentExperience);
+  
+    return (
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+        <div className="space-y-6">
+          {experiences.map((exp, index) => (
+            <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50">
+              <h5 className="font-bold text-gray-900 text-lg">{exp.title}</h5>
+              <p className="text-sm text-gray-500 mb-2">{exp.location}</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-600">
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
 export default function Portfolio() {
   return (
@@ -159,8 +198,11 @@ export default function Portfolio() {
                   <DialogHeader className="p-6 text-left">
                     <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
                     <DialogDescription asChild>
-                      <div className="text-lg text-gray-600 pt-4 whitespace-pre-line">
-                        {project.details.description}
+                      <div className="text-lg text-gray-600 pt-4">
+                        {project.title === 'Pengalaman Kerja' 
+                            ? renderExperienceDetails(project.details.description) 
+                            : <div className="whitespace-pre-line">{project.details.description}</div>
+                        }
                       </div>
                     </DialogDescription>
                   </DialogHeader>
