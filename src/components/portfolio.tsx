@@ -36,7 +36,7 @@ const projects = [
     details: {
       title: "Detail Pengalaman Kerja",
       description: "Di sini Anda bisa menguraikan pengalaman kerja secara rinci. Jelaskan peran, tanggung jawab, dan pencapaian di setiap posisi, terutama yang berkaitan dengan kepemimpinan, wirausaha, dan teknis.",
-      image: 'https://placehold.co/800x600.png',
+      image: 'https://i.imghippo.com/files/xAuO9561XwE.png',
       aiHint: 'office work'
     }
   },
