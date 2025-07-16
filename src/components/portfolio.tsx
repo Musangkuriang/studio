@@ -145,8 +145,8 @@ export default function Portfolio() {
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-md sm:max-w-3xl p-0">
-                <div className="relative h-56 w-full">
+              <DialogContent className="max-w-md sm:max-w-3xl p-0 flex flex-col max-h-[90vh]">
+                <div className="relative h-56 w-full flex-shrink-0">
                   <Image
                     src={project.details.image}
                     alt={project.details.title}
@@ -155,14 +155,16 @@ export default function Portfolio() {
                     data-ai-hint={project.details.aiHint}
                   />
                 </div>
-                <DialogHeader className="p-6">
-                  <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
-                  <DialogDescription asChild>
-                    <div className="text-lg text-gray-600 pt-4 whitespace-pre-line">
-                      {project.details.description}
-                    </div>
-                  </DialogDescription>
-                </DialogHeader>
+                <div className="overflow-y-auto">
+                  <DialogHeader className="p-6 text-left">
+                    <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
+                    <DialogDescription asChild>
+                      <div className="text-lg text-gray-600 pt-4 whitespace-pre-line">
+                        {project.details.description}
+                      </div>
+                    </DialogDescription>
+                  </DialogHeader>
+                </div>
               </DialogContent>
             </Dialog>
           ))}
