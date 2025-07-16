@@ -35,7 +35,39 @@ const projects = [
     aiHint: 'mobile banking',
     details: {
       title: "Detail Pengalaman Kerja",
-      description: "Di sini Anda bisa menguraikan pengalaman kerja secara rinci. Jelaskan peran, tanggung jawab, dan pencapaian di setiap posisi, terutama yang berkaitan dengan kepemimpinan, wirausaha, dan teknis.",
+      description: `🧰 Pengalaman Kerja
+
+1. Teknik Engineer – CV. Bojonegoro Teknik Utama
+📍 Bojonegoro | 2016
+Menangani perawatan dan perbaikan mesin industri. Bekerja di lingkungan teknis dengan tanggung jawab operasional harian. Perusahaan tutup setelah beberapa bulan bekerja.
+
+2. Tenaga Bantuan Las – CV (pekerja event)
+📍 Bojonegoro | 2016 (selama masa transisi)
+Bekerja membantu pengelasan di proyek-proyek tertentu. Mendapat pengalaman langsung dalam bidang fabrikasi dan kerja lapangan.
+
+3. Pedagang Pentol Keliling (Usaha Mandiri)
+📍 Bojonegoro | 2017 – 2020
+Mendirikan dan mengelola usaha pentol keliling dari nol dengan modal minim. Membangun relasi pelanggan, mengelola keuangan harian, dan menjaga kualitas produk.
+
+4. Founder & Owner – Bakso Cocot E Tonggo (Frozen Food Brand)
+📍 Bojonegoro | 2020
+Merancang dan mengembangkan produk pentol beku (frozen food). Menangani sendiri seluruh proses: produksi, pengemasan, branding, pemasaran, dan distribusi. Berhenti karena alasan kesehatan dan evaluasi bisnis jangka panjang.
+
+5. Desainer & Operator – Toko Printing dan Desain
+📍 Bojonegoro | 2021 – Sekarang (paralel dengan aktivitas lain)
+Membuat desain promosi, undangan, branding produk, dan media visual lainnya. Mengelola kebutuhan digital printing dan pengarsipan digital.
+
+6. Wirausaha Kecil – Snack, Parfum, Deterjen (Usaha Mandiri)
+📍 Bojonegoro | 2021 – Sekarang
+Merancang kemasan, strategi branding, dan distribusi. Menjalankan seluruh operasional sendiri: dari riset pasar hingga penjualan.
+
+7. Pengawas Desa – Bawaslu Kabupaten Tuban
+📍 Tuban | 2023 – Sekarang
+Mengawasi pelaksanaan tahapan Pemilu di tingkat desa. Berkoordinasi dengan pihak-pihak terkait dan memastikan jalannya proses demokrasi sesuai aturan.
+
+8. Pelatih & Pembina Pencak Silat – Organisasi Keolahragaan
+📍 Kecamatan Parengan | 2017 – Sekarang
+Membina generasi muda dalam pencak silat. Murid berhasil meraih prestasi hingga level provinsi (PORPROV IX 2025 di Batu). Aktif dalam kegiatan sosial dan pembinaan karakter.`,
       image: 'https://i.imghippo.com/files/xAuO9561XwE.png',
       aiHint: 'office work'
     }
@@ -125,8 +157,10 @@ export default function Portfolio() {
                 </div>
                 <DialogHeader className="p-6">
                   <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
-                  <DialogDescription className="text-lg text-gray-600 pt-4">
-                    {project.details.description}
+                  <DialogDescription asChild>
+                    <div className="text-lg text-gray-600 pt-4 whitespace-pre-line">
+                      {project.details.description}
+                    </div>
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
