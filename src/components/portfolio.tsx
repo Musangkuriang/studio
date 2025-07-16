@@ -115,7 +115,7 @@ export default function Portfolio() {
                 </div>
               </DialogTrigger>
               <DialogContent className="sm:max-w-3xl p-0">
-                <div className="relative h-80 w-full">
+                <div className="relative h-64 w-full">
                   <Image
                     src={project.details.image}
                     alt={project.details.title}
