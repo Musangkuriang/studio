@@ -11,7 +11,7 @@ export default function About() {
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-200 via-blue-200 to-white rounded-full opacity-30 blur-xl"></div>
              <div className="relative w-80 h-80 sm:w-96 sm:h-96">
                 <Image
-                    src="https://i.imghippo.com/files/D2381MoM.jpeg"
+                    src="https://i.ibb.co/68H41G4/Whats-App-Image-2024-07-26-at-20-49-16.jpg"
                     alt="Foto profil Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 384px"
