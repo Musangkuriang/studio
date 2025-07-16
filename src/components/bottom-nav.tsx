@@ -18,14 +18,13 @@ export default function BottomNav() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'portfolio', 'contact', 'footer', 'ai-optimizer'];
+    const sections = ['home', 'about', 'portfolio', 'contact', 'footer'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
-            // Map ai-optimizer section to portfolio nav item
-            setActiveSection(id === 'ai-optimizer' ? 'portfolio' : id);
+            setActiveSection(id);
           }
         });
       },
@@ -53,9 +52,6 @@ export default function BottomNav() {
 
   const renderNavItem = (item: (typeof navItems)[0]) => {
     let isActive = activeSection === item.href.substring(1);
-    if (item.href === '#portfolio' && activeSection === 'ai-optimizer') {
-      isActive = true;
-    }
 
     return (
       <Link
