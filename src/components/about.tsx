@@ -22,12 +22,12 @@ export default function About() {
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-200 via-blue-200 to-white rounded-full opacity-30 blur-xl"></div>
              <div className="relative w-80 h-80 sm:w-96 sm:h-96">
                 <Image
-                    src="https://i.imghippo.com/files/WoL4988dco.png"
+                    src="https://placehold.co/400x400.png"
                     alt="Foto profil Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 384px"
                     className="rounded-full object-cover shadow-2xl border-8 border-white"
-                    data-ai-hint="person profile"
+                    data-ai-hint="person working"
                 />
              </div>
           </div>
