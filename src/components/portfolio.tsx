@@ -19,8 +19,20 @@ const projects = [
     githubUrl: '#',
     aiHint: 'education person',
     details: {
-      title: "Detail Pendidikan",
-      description: "Ini adalah deskripsi detail tentang latar belakang pendidikan saya. Anda dapat mengisinya dengan riwayat sekolah, kursus yang relevan, atau pencapaian akademis lainnya.",
+      title: "Riwayat Pendidikan",
+      description: `🎓 Riwayat Pendidikan
+SMK YPM 6 Bojonegoro
+📍 Bojonegoro, Jawa Timur
+Jurusan: Teknik Mesin
+🗓️ Lulus: 2014
+Fokus pada perawatan dan pengoperasian mesin industri.
+Aktif dalam praktik kerja lapangan dan kegiatan teknis siswa.
+SMPN 1 Trucuk Bojonegoro
+📍 Bojonegoro, Jawa Timur
+🗓️ Lulus: 2011
+SDN Mojomalang 1
+📍 Desa Mojomalang, Kec. Parengan, Kab. Tuban
+🗓️ Lulus: 2008`,
       image: 'https://i.imghippo.com/files/iruC6868MxM.png',
       aiHint: 'education school'
     }
@@ -36,35 +48,27 @@ const projects = [
     details: {
       title: "Detail Pengalaman Kerja",
       description: `🧰 Pengalaman Kerja
-
 1. Teknik Engineer – CV. Bojonegoro Teknik Utama
 📍 Bojonegoro | 2016
 Menangani perawatan dan perbaikan mesin industri. Bekerja di lingkungan teknis dengan tanggung jawab operasional harian. Perusahaan tutup setelah beberapa bulan bekerja.
-
 2. Tenaga Bantuan Las – CV (pekerja event)
 📍 Bojonegoro | 2016 (selama masa transisi)
 Bekerja membantu pengelasan di proyek-proyek tertentu. Mendapat pengalaman langsung dalam bidang fabrikasi dan kerja lapangan.
-
 3. Pedagang Pentol Keliling (Usaha Mandiri)
 📍 Bojonegoro | 2017 – 2020
 Mendirikan dan mengelola usaha pentol keliling dari nol dengan modal minim. Membangun relasi pelanggan, mengelola keuangan harian, dan menjaga kualitas produk.
-
 4. Founder & Owner – Bakso Cocot E Tonggo (Frozen Food Brand)
 📍 Bojonegoro | 2020
 Merancang dan mengembangkan produk pentol beku (frozen food). Menangani sendiri seluruh proses: produksi, pengemasan, branding, pemasaran, dan distribusi. Berhenti karena alasan kesehatan dan evaluasi bisnis jangka panjang.
-
 5. Desainer & Operator – Toko Printing dan Desain
 📍 Bojonegoro | 2021 – Sekarang (paralel dengan aktivitas lain)
 Membuat desain promosi, undangan, branding produk, dan media visual lainnya. Mengelola kebutuhan digital printing dan pengarsipan digital.
-
 6. Wirausaha Kecil – Snack, Parfum, Deterjen (Usaha Mandiri)
 📍 Bojonegoro | 2021 – Sekarang
 Merancang kemasan, strategi branding, dan distribusi. Menjalankan seluruh operasional sendiri: dari riset pasar hingga penjualan.
-
 7. Pengawas Desa – Bawaslu Kabupaten Tuban
 📍 Tuban | 2023 – Sekarang
 Mengawasi pelaksanaan tahapan Pemilu di tingkat desa. Berkoordinasi dengan pihak-pihak terkait dan memastikan jalannya proses demokrasi sesuai aturan.
-
 8. Pelatih & Pembina Pencak Silat – Organisasi Keolahragaan
 📍 Kecamatan Parengan | 2017 – Sekarang
 Membina generasi muda dalam pencak silat. Murid berhasil meraih prestasi hingga level provinsi (PORPROV IX 2025 di Batu). Aktif dalam kegiatan sosial dan pembinaan karakter.`,
@@ -141,7 +145,49 @@ const renderExperienceDetails = (description: string) => {
         </div>
       </div>
     );
-  };
+};
+
+const renderEducationDetails = (description: string) => {
+    const lines = description.split('\n').filter(line => line.trim() !== '');
+    const title = lines.shift();
+  
+    const institutions: any[] = [];
+    let currentInstitution: any = null;
+  
+    lines.forEach(line => {
+      if (!line.startsWith('📍') && !line.startsWith('Jurusan:') && !line.startsWith('🗓️') && !line.startsWith('Fokus') && !line.startsWith('Aktif')) {
+        if (currentInstitution) institutions.push(currentInstitution);
+        currentInstitution = { name: line, details: [], points: [] };
+      } else if (line.startsWith('📍') || line.startsWith('Jurusan:') || line.startsWith('🗓️')) {
+        if (currentInstitution) currentInstitution.details.push(line);
+      } else {
+        if (currentInstitution) currentInstitution.points.push(line);
+      }
+    });
+    if (currentInstitution) institutions.push(currentInstitution);
+  
+    return (
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800 mb-4">{title}</h4>
+        <div className="space-y-6">
+          {institutions.map((inst, index) => (
+            <div key={index} className="p-4 rounded-lg border border-gray-200 bg-gray-50/50">
+              <h5 className="font-bold text-gray-900 text-lg">{inst.name}</h5>
+              <div className="text-sm text-gray-500 mb-2 space-y-1">
+                {inst.details.map((detail: string, i: number) => <p key={i}>{detail}</p>)}
+              </div>
+              <ul className="list-disc list-inside space-y-1 text-gray-600">
+                {inst.points.map((point: string, i: number) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+};
+  
 
 export default function Portfolio() {
   return (
@@ -198,9 +244,11 @@ export default function Portfolio() {
                   <DialogHeader className="p-6 text-left">
                     <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
                     <DialogDescription asChild>
-                      <div className="text-lg text-gray-600 pt-4">
+                       <div className="text-lg text-gray-600 pt-4">
                         {project.title === 'Pengalaman Kerja' 
                             ? renderExperienceDetails(project.details.description) 
+                            : project.title === 'Pendidikan'
+                            ? renderEducationDetails(project.details.description)
                             : <div className="whitespace-pre-line">{project.details.description}</div>
                         }
                       </div>
