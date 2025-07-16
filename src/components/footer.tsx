@@ -9,7 +9,7 @@ const TiktokIcon = () => (
 )
 
 const socialLinks = [
-  { icon: Github, href: '#' },
+  { icon: Github, href: 'https://github.com/datpindah' },
   { icon: Instagram, href: 'https://www.instagram.com/sii.andii?igsh=MTIybjM3czlzNnpjZg==' },
   { icon: TiktokIcon, href: 'https://www.tiktok.com/@andxyz57?_t=ZS-8y46gG6ZC8P&_r=1' },
 ];
@@ -44,7 +44,7 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2">
                 <li><Link href="https://www.tiktok.com/@andxyz57?_t=ZS-8y46gG6ZC8P&_r=1" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 hover:text-primary">Tiktok</Link></li>
-                <li><Link href="#" className="text-base text-gray-600 hover:text-primary">GitHub</Link></li>
+                <li><Link href="https://github.com/datpindah" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 hover:text-primary">GitHub</Link></li>
                 <li><Link href="https://www.instagram.com/sii.andii?igsh=MTIybjM3czlzNnpjZg==" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 hover:text-primary">Instagram</Link></li>
               </ul>
             </div>
