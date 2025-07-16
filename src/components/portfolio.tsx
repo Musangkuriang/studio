@@ -58,15 +58,15 @@ const projects = [
   {
     title: 'Target',
     description: 'Jika Saya Di Berikan Kesempatan Untuk Memimpin, Saya ingin Memimpin Dunia Dengan Kejujuran Dan Ketulusan',
-    image: 'https://placehold.co/600x400.png',
-    tags: ['EdTech', 'SaaS', 'Interaction Design'],
+    image: 'https://i.imghippo.com/files/AAC6024kg.png',
+    tags: ['Visi', 'Kepemimpinan', 'Global'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'elearning platform',
+    aiHint: 'leadership world',
     details: {
       title: "Detail Target & Visi",
       description: "Jelaskan visi kepemimpinan Anda di sini. Uraikan bagaimana Anda akan menerapkan nilai-nilai seperti kejujuran dan ketulusan dalam memimpin, serta target-target spesifik yang ingin Anda capai.",
-      image: 'https://placehold.co/800x600.png',
+      image: 'https://i.imghippo.com/files/AAC6024kg.png',
       aiHint: 'leadership vision'
     }
   },
