@@ -28,7 +28,7 @@ const projects = [
   {
     title: 'Pengalaman Kerja',
     description: 'Saya Memiliki Beberapa Pengalaman Kerja Mulai Dari Kepemimpinan,Wirausaha,Web Developer,Kerja Lapangan Dll',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://i.imghippo.com/files/xAuO9561XwE.png',
     tags: ['Mobile Design', 'Pengawas Desa', 'Pelatih & Pembina Pencak Silat'],
     liveUrl: '#',
     githubUrl: '#',
