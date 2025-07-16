@@ -59,10 +59,10 @@ export default function Contact() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Get In Touch
+          Hubungi saya
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-            Have a project in mind or just want to say hello? I'd love to hear from you.
+          Punya proyek dalam pikiran atau hanya ingin menyapa? Saya akan senang mendengar kabar dari Anda.
           </p>
         </div>
 

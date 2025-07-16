@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Instagram, Twitter, Heart } from 'lucide-react';
 
 const socialLinks = [
   { icon: Github, href: '#' },
-  { icon: Linkedin, href: '#' },
+  { icon: Instagram, href: '#' },
   { icon: Twitter, href: '#' },
 ];
 
@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="text-3xl font-extrabold text-gradient">AS</span>
             </Link>
             <p className="max-w-xs text-base text-gray-600">
-              A UI/UX Designer dedicated to creating user-centric digital products.
+            Terlahir dari keterbatasan, tumbuh dengan tekad. Selalu belajar, selalu berkembang.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-2">
@@ -36,9 +36,9 @@ export default function Footer() {
                 Connect
               </h3>
               <ul className="mt-4 space-y-2">
-                <li><Link href="#" className="text-base text-gray-600 hover:text-primary">LinkedIn</Link></li>
+                <li><Link href="#" className="text-base text-gray-600 hover:text-primary">Tiktok</Link></li>
                 <li><Link href="#" className="text-base text-gray-600 hover:text-primary">GitHub</Link></li>
-                <li><Link href="#" className="text-base text-gray-600 hover:text-primary">Twitter</Link></li>
+                <li><Link href="#" className="text-base text-gray-600 hover:text-primary">Instagram</Link></li>
               </ul>
             </div>
           </div>
