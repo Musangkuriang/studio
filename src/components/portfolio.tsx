@@ -1,7 +1,13 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Badge } from './ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const projects = [
   {
@@ -11,7 +17,13 @@ const projects = [
     tags: ['UI/UX', 'React', 'Data Visualization'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'dashboard analytics'
+    aiHint: 'dashboard analytics',
+    details: {
+      title: "Detail Pendidikan",
+      description: "Ini adalah deskripsi detail tentang latar belakang pendidikan saya. Anda dapat mengisinya dengan riwayat sekolah, kursus yang relevan, atau pencapaian akademis lainnya.",
+      image: 'https://placehold.co/800x600.png',
+      aiHint: 'education school'
+    }
   },
   {
     title: 'Pengalaman Kerja',
@@ -20,7 +32,13 @@ const projects = [
     tags: ['Mobile Design', 'Pengawas Desa', 'Pelatih & Pembina Pencak Silat'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'mobile banking'
+    aiHint: 'mobile banking',
+    details: {
+      title: "Detail Pengalaman Kerja",
+      description: "Di sini Anda bisa menguraikan pengalaman kerja secara rinci. Jelaskan peran, tanggung jawab, dan pencapaian di setiap posisi, terutama yang berkaitan dengan kepemimpinan, wirausaha, dan teknis.",
+      image: 'https://placehold.co/800x600.png',
+      aiHint: 'office work'
+    }
   },
   {
     title: 'Karya',
@@ -29,7 +47,13 @@ const projects = [
     tags: ['Web Aplikasi', 'Desain Grafis', 'Prestasi Kepemimpinan'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'healthcare telehealth'
+    aiHint: 'healthcare telehealth',
+    details: {
+      title: "Detail Karya",
+      description: "Bagian ini untuk memamerkan karya-karya Anda. Tampilkan proyek web, hasil desain grafis, atau bukti pencapaian kepemimpinan. Jelaskan proses dan hasil dari setiap karya.",
+      image: 'https://placehold.co/800x600.png',
+      aiHint: 'creative design'
+    }
   },
   {
     title: 'Target',
@@ -38,7 +62,13 @@ const projects = [
     tags: ['EdTech', 'SaaS', 'Interaction Design'],
     liveUrl: '#',
     githubUrl: '#',
-    aiHint: 'elearning platform'
+    aiHint: 'elearning platform',
+    details: {
+      title: "Detail Target & Visi",
+      description: "Jelaskan visi kepemimpinan Anda di sini. Uraikan bagaimana Anda akan menerapkan nilai-nilai seperti kejujuran dan ketulusan dalam memimpin, serta target-target spesifik yang ingin Anda capai.",
+      image: 'https://placehold.co/800x600.png',
+      aiHint: 'leadership vision'
+    }
   },
 ];
 
@@ -51,48 +81,57 @@ export default function Portfolio() {
             Portofolio Saya
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-            Here are some of the projects I'm proud of. Each one was a unique challenge and a great learning experience.
+            Berikut adalah beberapa pilar penting dalam perjalanan saya. Masing-masing mewakili tantangan dan pembelajaran yang berharga.
           </p>
         </div>
 
         <div className="mt-16 grid gap-10 sm:grid-cols-1 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="relative h-64 w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  data-ai-hint={project.aiHint}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-              <div className="p-6">
-                <h3 className="font-headline text-2xl font-bold text-gray-900">{project.title}</h3>
-                <p className="mt-2 text-base text-gray-600">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <Badge key={tag} variant="outline" className="border-purple-200 bg-purple-50/50 text-purple-700">
-                      {tag}
-                    </Badge>
-                  ))}
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <div className="group relative cursor-pointer overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      data-ai-hint={project.aiHint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-headline text-2xl font-bold text-gray-900">{project.title}</h3>
+                    <p className="mt-2 text-base text-gray-600">{project.description}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {project.tags.map(tag => (
+                        <Badge key={tag} variant="outline" className="border-purple-200 bg-purple-50/50 text-purple-700">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute top-4 right-4 flex space-x-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <Link href={project.liveUrl} target="_blank">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-gray-700 shadow-md backdrop-blur-sm transition-colors hover:bg-white hover:text-primary">
-                      <ExternalLink className="h-5 w-5" />
-                    </span>
-                  </Link>
-                  <Link href={project.githubUrl} target="_blank">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-gray-700 shadow-md backdrop-blur-sm transition-colors hover:bg-white hover:text-primary">
-                      <Github className="h-5 w-5" />
-                    </span>
-                  </Link>
-              </div>
-            </div>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-3xl p-0">
+                <div className="relative h-80 w-full">
+                  <Image
+                    src={project.details.image}
+                    alt={project.details.title}
+                    fill
+                    className="object-cover rounded-t-lg"
+                    data-ai-hint={project.details.aiHint}
+                  />
+                </div>
+                <DialogHeader className="p-6">
+                  <DialogTitle className="text-3xl font-bold font-headline">{project.details.title}</DialogTitle>
+                  <DialogDescription className="text-lg text-gray-600 pt-4">
+                    {project.details.description}
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>
