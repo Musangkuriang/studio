@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
               <div className="relative mx-auto w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
                   <Image
-                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
+                    src="https://i.imghippo.com/files/WoL4988dco.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 640px) 280px, 320px"
@@ -107,7 +107,7 @@ export default function Hero() {
               >
                 <Link href="#contact">
                   Let's talk <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                  </Link>
               </Button>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Hero() {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-[450px] h-[450px] xl:w-[550px] xl:h-[550px]">
                   <Image
-                    src="https://i.imghippo.com/files/JwEZ2712aXI.png"
+                    src="https://i.imghippo.com/files/WoL4988dco.png"
                     alt="Andi Siswanto"
                     fill
                     sizes="(max-width: 1280px) 450px, 550px"

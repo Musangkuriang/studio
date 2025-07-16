@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8 text-center text-base text-gray-500">
           <p className="flex items-center justify-center">
-            © {new Date().getFullYear()} Andi Siswanto. Made with <Heart className="mx-1 h-5 w-5 text-red-500 fill-current" /> in Jakarta.
+            © {new Date().getFullYear()} Andi Siswanto. Made with <Heart className="mx-1 h-5 w-5 text-red-500 fill-current" /> in Tuban.
           </p>
         </div>
       </div>
